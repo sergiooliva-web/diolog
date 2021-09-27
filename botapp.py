@@ -9,7 +9,7 @@ def startCommand(bot, update):
 def textMessage(bot, update):
     key = API_KEY('AIzaSyCEsb3Kvb5bVUb2Z3ZPCeZjJiM_3zdakXU').text_request()
     request.lang = 'ru' # На каком языке будет послан запрос
-    request.session_id = 'DiologBot' # ID Сессии диалога (нужно, чтобы потом учить бота)
+    request.session_id = 'Small-Talk-First' # ID Сессии диалога (нужно, чтобы потом учить бота)
     request.query = update.message.text # Посылаем запрос к ИИ с сообщением от юзера
     responseJson = json.loads(request.getresponse().read().decode('utf-8'))
     response = responseJson['result']['fulfillment']['speech'] # Разбираем JSON и вытаскиваем ответ
